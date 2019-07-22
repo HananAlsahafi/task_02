@@ -1,3 +1,8 @@
 from django.shortcuts import render
-
-# Create your views here.
+from django.http import HttpResponse
+def home (request):
+    text={
+        "msg":"Hello, django",
+        "title":"My First Django App"
+    }
+    return render(request,'hello.html',text)
